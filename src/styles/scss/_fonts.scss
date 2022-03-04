@@ -1,0 +1,143 @@
+@mixin main-text {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: -0.01em;
+}
+
+@mixin main-text-sm {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+}
+
+@mixin main-text-extra-bold {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 65px;
+  line-height: 69px;
+}
+
+@mixin main-text-extra-bold-md {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 52px;
+}
+
+@mixin main-text-extra-bold-sm {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 34px;
+}
+
+@mixin main-text-extra-bold-subtitle {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: -0.01em;
+}
+
+@mixin main-text-extra-bold-subtitle-sm {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 23px;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+}
+
+@mixin main-text-bold {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 62px;
+}
+
+@mixin main-text-bold-sm {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 44px;
+}
+
+@mixin main-text-regular {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+}
+
+@mixin main-text-regular-sm {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+@mixin second-bold {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+@mixin second-medium {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@mixin second-regular {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+}
+
+@mixin second-regular-sm {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+}
+
+@mixin second-light {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.015em;
+}
+
+@mixin second-light-sm {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: -0.015em;
+}

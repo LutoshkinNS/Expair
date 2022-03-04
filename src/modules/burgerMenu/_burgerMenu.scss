@@ -1,0 +1,209 @@
+@import '/src/styles/scss/_colors.scss';
+@import '/src/styles/scss/_fonts.scss';
+@import "/src/styles/scss/_brakepoints.scss";
+
+.burger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  background-color: $bg-light;
+  color: $text-dark;
+  @include main-text-bold;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: -0.015em;
+  box-shadow: 24px 0px 60px rgba(0, 0, 0, 0.39);
+  z-index: 10;
+  transform: translateX(-120%);
+  transition: transform .5s;
+
+  &_show {
+    transform: translateX(0%);
+  }
+
+  &_active {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: -7px;
+      left: 0px;
+      height: 2px;
+      width: 100%;
+      background-color: $third-color;
+    }
+  }
+
+  &__container {
+    margin: 31px 38px 100px 112px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 175px;
+  }
+
+  &__logo-wrap {
+    max-width: 196px;
+  }
+
+  &__logo {
+    width: 100%;
+  }
+
+  &__close {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      width: 25px;
+      height: 2px;
+      background: $text-dark;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover:before, &:hover:after {
+      background: $third-color;
+    }
+  }
+
+  &__phone-wrap {
+    display: none;
+  }
+
+  &__phone {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__nav-item {
+    position: relative;
+    margin-bottom: 292px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: -7px;
+      left: 0px;
+      height: 2px;
+      width: 0%;
+      background-color: $third-color;
+      transition: width .5s;
+    }
+
+    &:hover:after {
+      display: unset;
+      width: 100%;
+    }
+  }
+
+  &__nav-item-link {
+    text-decoration: none;
+  }
+
+  &__socials {
+    margin-bottom: 53px;
+  }
+
+  &__socials-list {
+    display: flex;
+  }
+
+  &__socials-list-item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__socials-list-item-link svg {
+    fill: $third-color;
+
+    &:hover {
+      fill: $text-dark;
+    }
+  }
+
+  &__politic {
+    text-decoration: none;
+    @include main-text;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: normal;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @media (max-width: $md) {
+    height: 100vh;
+    width: 100%;
+
+    &__container {
+      margin: 31px 38px 60px 112px;
+    }
+
+    &__header {
+      margin-bottom: 41px;
+    }
+
+    &__phone-wrap {
+      display: block;
+      margin-bottom: 108px;
+    }
+
+    &__nav-item {
+      &:hover:after {
+        width: 0%;
+      }
+    }
+  }
+
+  @media (max-width: $sm) {
+    &__container {
+      margin: 14px 20px 52px;
+    }
+
+    &__logo-wrap {
+      max-width: 117px;
+    }
+
+    &__close {
+      width: 20px;
+      height: 20px;
+
+      &:before, &:after {
+        width: 20px;
+      }
+    }
+  }
+}

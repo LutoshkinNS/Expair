@@ -1,0 +1,118 @@
+@import '/src/styles/scss/_colors.scss';
+@import '/src/styles/scss/_fonts.scss';
+@import "/src/styles/scss/_brakepoints.scss";
+
+.header {
+  color: $text-light;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    padding: 9px 112px;
+    background: $bg-dark;
+  }
+
+  &__left-block {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+
+  &__right-block {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
+
+  &__btn-to-form {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $text-light;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: inherit;
+    @include second-medium;
+
+    &:hover {
+      color: $third-color;
+      border-color: $third-color;
+    }
+
+    &:active {
+      color: $third-color-active;
+      border-color: $third-color-active;
+    }
+
+    &_white {
+      border: 2px solid $text-dark;
+    }
+  }
+
+  &__logo-wrap {
+    display: flex;
+    margin-right: 51px;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+  &__logo {
+    width: 100%;
+  }
+
+  &__phone {
+    margin-right: 47px;
+    @include second-bold;
+
+    &:hover {
+      color: $third-color;
+    }
+
+    &:active {
+      color: $third-color-active;
+    }
+  }
+
+  @media (max-width: $xl) {
+    &__inner {
+      padding: 9px 20px;
+    }
+  }
+
+  @media (max-width: $lg) {
+    &__right-block {
+      display: none;
+    }
+    &__left-block {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: $sm) {
+    &__logo-wrap {
+      width: 117px;
+    }
+    &__left-block {
+      width: 100%;
+      margin-right: 0;
+    }
+    &__inner {
+      padding: 5px 20px;
+      height: 50px;
+    }
+  }
+}

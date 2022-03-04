@@ -1,0 +1,120 @@
+@import "/src/styles/scss/_colors.scss";
+@import "/src/styles/scss/_fonts.scss";
+@import "/src/styles/scss/_brakepoints.scss";
+
+.principles {
+  padding-top: 185px;
+  padding-bottom: 211px;
+  background-image: url('/src/images/invertedQuotes.svg'), url('/src/images/quotes.svg');
+  background-position-x: 90%, 10%;
+  background-position-y: 0, 100%;
+  background-repeat: no-repeat, no-repeat;
+
+  &__list {
+    max-width: 799px;
+    list-style-type: none;
+    padding-left: 52px;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 40px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 6px;
+      left: -52px;
+      width: 29px;
+      height: 12px;
+      background: $third-color;
+      border-radius: 6px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__quot {
+    position: relative;
+    margin: 0;
+    max-width: 799px;
+    padding-left: 52px;
+    @include main-text-extra-bold;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: -0.015em;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 8px;
+      left: 0;
+      width: 29px;
+      height: 29px;
+      background: $third-color;
+      border-radius: 6px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 20px;
+      left: 3px;
+      width: 23px;
+      height: 23px;
+      background: $third-color;
+      border-radius: 6px;
+      transform: rotate(45deg);
+    }
+  }
+
+  @media (max-width: $sm) {
+    padding-top: 52px;
+    padding-bottom: 52px;
+    @include main-text-sm;
+
+    &__list {
+      margin-bottom: 29px;
+      padding-left: 32px;
+    }
+
+    &__item {
+      margin-bottom: 26px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 6px;
+        left: -32px;
+        width: 20px;
+        height: 8px;
+        background: $third-color;
+        border-radius: 6px;
+      }
+    }
+
+    &__quot {
+      font-size: 26px;
+      line-height: 31px;
+      padding-left: 32px;
+
+      &::before {
+        top: 8px;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+      }
+
+      &::after {
+        top: 16px;
+        left: 2px;
+        width: 16px;
+        height: 16px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

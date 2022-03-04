@@ -1,0 +1,50 @@
+@import '../../styles/scss/_colors.scss';
+@import '../../styles/scss/_fonts.scss';
+@import "/src/styles/scss/_brakepoints.scss";
+
+.footer {
+  @include second-regular;
+  background: $bg-dark;
+  color: $text-light;
+  padding-top: 51px;
+  padding-bottom: 51px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  &__item {
+    margin-right: 15px;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+
+  @media (max-width: $md) {
+    @include second-regular;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__item:nth-child(2) {
+      width: 100%;
+      margin-bottom: 20px;
+      order: -1;
+    }
+  }
+
+  @media (max-width: $sm) {
+    @include second-regular-sm;
+    &__item {
+      margin-right: 5px;
+    }
+  }
+
+}

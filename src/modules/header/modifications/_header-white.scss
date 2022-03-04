@@ -1,0 +1,11 @@
+@import '/src/styles/scss/_colors.scss';
+
+.header_white {
+  color: $text-dark;
+
+  .header {
+    &__inner {
+      background: $bg-light;
+    }
+  }
+}

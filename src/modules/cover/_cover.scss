@@ -1,0 +1,100 @@
+@import "/src/styles/scss/_colors.scss";
+@import "/src/styles/scss/_brakepoints.scss";
+
+.cover {
+  background-image: url('/src/images/cover/bg.png');
+  background-position: center;
+  background-color: $bg-dark;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text-light;
+
+  &__list {
+    padding-top: 196px;
+    padding-bottom: 273px;
+  }
+
+  &__list-item {
+    transform: translateX(0px);
+    transition: transform .5s;
+  }
+
+  &__item-link {
+    display: flex;
+    text-decoration: none;
+  }
+
+  &__list-item-arrow {
+    transform: translateX(0px);
+    transition: transform .5s;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      width: 26px;
+      height: 2px;
+      margin-top: -1px;
+      background: $third-color;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 5px;
+      width: 18px;
+      height: 18px;
+      border-top: 2px solid $third-color;
+      border-right: 2px solid $third-color;
+      margin-top: -9px;
+      transform: rotate(45deg);
+    }
+  }
+
+  .cover__list-item:hover .cover__list-item-arrow {
+    transform: translateX(15px);
+  }
+
+  .cover__list-item:hover {
+    transform: translateX(10px);
+  }
+
+  @media (max-width: $md) {
+    &__list {
+      padding-top: 138px;
+      padding-bottom: 215px;
+    }
+  }
+
+  @media (max-width: $sm) {
+    &__list {
+      padding-top: 84px;
+      padding-bottom: 108px;
+    }
+
+    &__list-item-arrow {
+      &::before {
+        width: 13px;
+      }
+
+      &::after {
+        left: 3px;
+        width: 9px;
+        height: 9px;
+        margin-top: -4.5px;
+      }
+    }
+
+    .cover__list-item:hover .cover__list-item-arrow {
+      transform: translateX(10px);
+    }
+
+    .cover__list-item:hover {
+      transform: translateX(5px);
+    }
+  }
+}

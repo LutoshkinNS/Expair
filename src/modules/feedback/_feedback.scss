@@ -1,0 +1,243 @@
+@import '../../styles/scss/_colors.scss';
+@import '../../styles/scss/_fonts.scss';
+@import "/src/styles/scss/_brakepoints.scss";
+
+.feedback {
+  padding-top: 124px;
+  padding-bottom: 81px;
+  background: $bg-dark;
+
+  &__title {
+    color: $text-light;
+    @include main-text-bold;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    color: $signature;
+    @include main-text-regular;
+    margin-bottom: 83px;
+  }
+
+  &__field {
+    position: relative;
+    width: 100%;
+    margin-right: 37px;
+  }
+
+  &__form {
+    color: $text-light;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 35px;
+    }
+
+    textarea {
+      resize: none;
+      background: $bg-dark;
+      padding: 10px 16px;
+      border: 1px $border-color solid;
+      color: inherit;
+      height: 200px;
+      width: 100%;
+
+      &::placeholder {
+        color: $text-light;
+      }
+
+      &:focus {
+        outline: 0;
+        outline-offset: 0;
+        border: 2px $border-color solid;
+      }
+    }
+
+    input {
+      padding: 8px 0;
+      background: transparent;
+      border: none;
+      border-bottom: 1px $border-color solid;
+      color: inherit;
+      width: 100%;
+
+      &:-webkit-autofill {
+        -webkit-box-shadow: inset 0 0 0 50px $bg-dark;
+        -webkit-text-fill-color: $text-light;
+      }
+
+      &::placeholder {
+        color: $text-light;
+      }
+
+      &:focus {
+        outline: 0;
+        outline-offset: 0;
+        border-bottom: 2px $border-color solid;
+      }
+    }
+
+    input[type=checkbox] {
+      display: none;
+    }
+
+    &-checkbox-label {
+      position: relative;
+      color: $signature;
+      padding-left: 44px;
+      @include second-regular;
+      cursor: pointer;
+    }
+
+    input[type=checkbox]:not(checked) + label:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 1px solid $border-color;
+      border-radius: 3px;
+      background-color: #fff;
+      position: absolute;
+      top: -1px;
+      left: 0
+    }
+
+    input[type=checkbox]:checked + label:before {
+      content: url('/src/images/check.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $border-color;
+      border-radius: 3px;
+      background-color: #fff;
+      position: absolute;
+      top: -1px;
+      left: 0
+    }
+
+    &-submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 44px;
+      width: 142px;
+      @include main-text-bold;
+      font-size: 16px;
+      letter-spacing: 0.01em;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background: $third-color;
+      }
+
+      &:active {
+        background: $third-color-active;
+      }
+    }
+  }
+
+  &__error-message {
+    font-size: 13px;
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    color: $text-error;
+  }
+
+  &__field-error {
+    & input {
+      border-bottom: 1px solid $text-error;
+
+      &:focus {
+        border-bottom: 2px $text-error solid;
+      }
+    }
+
+    & textarea {
+      border: 1px $text-error solid;
+
+      &:focus {
+        border: 2px $text-error solid;
+      }
+    }
+  }
+
+  &__error-textarea {
+    top: 30px;
+    left: 16px;
+  }
+
+  @media (max-width: $md) {
+    &__form {
+      input {
+        margin-right: 0;
+      }
+    }
+
+    &__form-row {
+      flex-direction: column;
+    }
+
+    &__field {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @media (max-width: $sm) {
+    padding-top: 38px;
+    padding-bottom: 38px;
+
+    &__form {
+      font-size: 14px;
+      line-height: 20px;
+
+      textarea {
+        height: 140px;
+      }
+
+      &-checkbox-label {
+        padding-left: 36px;
+        @include second-regular-sm;
+      }
+
+      &-row {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__title {
+      @include main-text-bold-sm;
+    }
+
+    &__text {
+      @include main-text-regular-sm;
+      margin-bottom: 32px;
+    }
+    input[type=checkbox]:not(checked) + label:before {
+      top: -3px;
+    }
+
+    input[type=checkbox]:checked + label:before {
+      top: -3px;
+    }
+
+  }
+}
+
+.disabled {
+  background: $disabled;
+  cursor: unset;
+
+  &:hover, &:active {
+    background: $disabled;
+  }
+}

@@ -1,0 +1,79 @@
+@import '/src/styles/scss/_colors.scss';
+@import '/src/styles/scss/fonts.scss';
+@import "/src/styles/scss/_brakepoints.scss";
+
+.popup {
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 100;
+  }
+
+  &__content-block {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    height: 400px;
+    padding: 57px;
+    background-color: $bg-light;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.39);
+    background-image: url("/src/images/invertedQuotes.svg");
+    background-position-x: -20%;
+    background-repeat: no-repeat;
+  }
+
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      margin-top: -1px;
+      width: 20px;
+      height: 2px;
+      background: $text-dark;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover:before, &:hover:after {
+      background: $third-color;
+    }
+  }
+
+  &__error-text {
+    color: $text-error;
+  }
+
+  @media (max-width: $sm) {
+    @include main-text-sm;
+    &__content-block {
+      max-width: 360px;
+      height: 310px;
+      padding: 35px;
+    }
+  }
+}
