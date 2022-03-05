@@ -44,7 +44,7 @@
       resize: none;
       background: $bg-grey;
       padding: 10px 16px;
-      border: 1px $border-color solid;
+      border: 2px $border-color solid;
       color: inherit;
       height: 200px;
       width: 100%;
@@ -56,7 +56,6 @@
       &:focus {
         outline: 0;
         outline-offset: 0;
-        border: 2px $border-color solid;
       }
     }
 
@@ -64,7 +63,7 @@
       padding: 8px 0;
       background: transparent;
       border: none;
-      border-bottom: 1px $border-color solid;
+      border-bottom: 2px $border-color solid;
       color: inherit;
       width: 100%;
 
@@ -80,7 +79,6 @@
       &:focus {
         outline: 0;
         outline-offset: 0;
-        border-bottom: 2px $border-color solid;
       }
     }
 
@@ -156,19 +154,11 @@
 
   &__field-error {
     & input {
-      border-bottom: 1px solid $text-error;
-
-      &:focus {
-        border-bottom: 2px $text-error solid;
-      }
+      border-bottom: 2px solid $text-error;
     }
 
     & textarea {
-      border: 1px $text-error solid;
-
-      &:focus {
-        border: 2px $text-error solid;
-      }
+      border: 2px $text-error solid;
     }
   }
 
