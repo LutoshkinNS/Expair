@@ -1,3 +1,67 @@
+@font-face {
+  font-family: "M PLUS 1p";
+  font-style: normal;
+  font-weight: 400;
+  src: local("M PLUS 1p"),
+  url("../../fonts/M_PLUS_1p/MPLUS1p-Regular.ttf") format("ttf")
+}
+
+@font-face {
+  font-family: "M PLUS 1p";
+  font-style: normal;
+  font-weight: 500;
+  src: local("M PLUS 1p"),
+  url("../../fonts/M_PLUS_1p/MPLUS1p-Medium.ttf") format("ttf")
+}
+
+@font-face {
+  font-family: "M PLUS 1p";
+  font-style: normal;
+  font-weight: 700;
+  src: local("M PLUS 1p"),
+  url("../../fonts/M_PLUS_1p/MPLUS1p-Bold.ttf") format("ttf")
+}
+
+@font-face {
+  font-family: "M PLUS 1p";
+  font-style: normal;
+  font-weight: 800;
+  src: local("M PLUS 1p"),
+  url("../../fonts/M_PLUS_1p/MPLUS1p-ExtraBold.ttf") format("ttf")
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto"),
+  url("../../fonts/Roboto/Roboto-Light.ttf") format("ttf")
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"),
+  url("../../fonts/Roboto/Roboto-Regular.ttf") format("ttf")
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto"),
+  url("../../fonts/Roboto/Roboto-Medium.ttf") format("ttf")
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto"),
+  url("../../fonts/Roboto/Roboto-Bold.ttf") format("ttf")
+}
+
 @mixin main-text {
   font-family: 'M PLUS 1p', sans-serif;
   font-style: normal;
