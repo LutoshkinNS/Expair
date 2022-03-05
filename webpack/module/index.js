@@ -45,15 +45,6 @@ module.exports = () => {
         use: cssLoaders('sass-loader'),
       },
       {
-        test: /\.(ttf|woff|woff2|eot)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[ext]',
-          },
-        },
-      },
-      {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: jsLoaders(),
