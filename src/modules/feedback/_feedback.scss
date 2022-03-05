@@ -5,7 +5,7 @@
 .feedback {
   padding-top: 124px;
   padding-bottom: 81px;
-  background: $bg-dark;
+  background: $bg-grey;
 
   &__title {
     color: $text-light;
@@ -22,7 +22,10 @@
   &__field {
     position: relative;
     width: 100%;
-    margin-right: 37px;
+
+    &:not(:last-child) {
+      padding-right: 37px;
+    }
   }
 
   &__form {
@@ -39,7 +42,7 @@
 
     textarea {
       resize: none;
-      background: $bg-dark;
+      background: $bg-grey;
       padding: 10px 16px;
       border: 1px $border-color solid;
       color: inherit;
@@ -99,7 +102,7 @@
       height: 20px;
       border: 1px solid $border-color;
       border-radius: 3px;
-      background-color: #fff;
+      background-color: $text-light;
       position: absolute;
       top: -1px;
       left: 0
@@ -114,7 +117,7 @@
       height: 20px;
       border: 1px solid $border-color;
       border-radius: 3px;
-      background-color: #fff;
+      background-color: $text-light;
       position: absolute;
       top: -1px;
       left: 0
