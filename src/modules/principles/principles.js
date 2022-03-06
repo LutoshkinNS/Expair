@@ -5,16 +5,18 @@ const principles = () => {
   const principlesList = document.querySelector('.principles__list');
 
   const animationList = () => {
-    const scrollToList = principlesList.getBoundingClientRect().top;
-    const windowScrollPosition = window.pageYOffset;
+    if (principlesList) {
+      const scrollToList = principlesList.getBoundingClientRect().top;
+      const windowScrollPosition = window.pageYOffset;
 
-    if (scrollToList <= windowScrollPosition) {
-      document.removeEventListener('scroll', animationList);
-      principlesItems.forEach((principlesItem, idx) => {
-        setTimeout(() => {
-          principlesItem.style.transform = 'translateX(0%)';
-        }, 250 * (idx + 1));
-      });
+      if (scrollToList <= windowScrollPosition) {
+        document.removeEventListener('scroll', animationList);
+        principlesItems.forEach((principlesItem, idx) => {
+          setTimeout(() => {
+            principlesItem.style.transform = 'translateX(0%)';
+          }, 250 * (idx + 1));
+        });
+      }
     }
   };
 
