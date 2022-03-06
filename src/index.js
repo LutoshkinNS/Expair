@@ -7,13 +7,13 @@ import './styles/preloader.css';
 // header
 import header from './modules/header/header';
 // cover
-import './modules/cover/cover';
+import cover from './modules/cover/cover';
 // contacts
 import map from './modules/contacts/contacts';
 // principles
 import './modules/principles/principles';
 // services
-import servicesAccordion from './modules/services/services';
+import services from './modules/services/services';
 // situation
 import './modules/situation/situation';
 // situations
@@ -26,7 +26,8 @@ import closePopup from './modules/popup/popup';
 import './modules/footer/footer';
 
 header();
-map();
-servicesAccordion();
+cover();
+services();
 feedback();
 closePopup();
+map([58.60066121, 49.66926593]);

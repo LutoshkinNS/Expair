@@ -16,7 +16,7 @@
     padding-bottom: 273px;
   }
 
-  &__list-item {
+  &__item-content {
     transform: translateX(0px);
     transition: transform .5s;
   }
@@ -55,11 +55,11 @@
     }
   }
 
-  .cover__list-item:hover .cover__list-item-arrow {
+  &__list-item:hover .cover__list-item-arrow {
     transform: translateX(15px);
   }
 
-  .cover__list-item:hover {
+  &__list-item:hover .cover__item-content {
     transform: translateX(10px);
   }
 

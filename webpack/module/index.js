@@ -45,6 +45,11 @@ module.exports = () => {
         use: cssLoaders('sass-loader'),
       },
       {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/inline',
+        // type: 'asset/resource',
+      },
+      {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: jsLoaders(),
