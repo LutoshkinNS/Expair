@@ -8,8 +8,6 @@ import './styles/preloader.css';
 import header from './modules/header/header';
 // cover
 import cover from './modules/cover/cover';
-// contacts
-import map from './modules/contacts/contacts';
 // principles
 import './modules/principles/principles';
 // services
@@ -30,4 +28,3 @@ cover();
 services();
 feedback();
 closePopup();
-map([58.60066121, 49.66926593]);
