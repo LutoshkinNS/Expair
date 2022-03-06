@@ -180,6 +180,7 @@
 
     &__field {
       &:not(:last-child) {
+        padding-right: 0;
         margin-bottom: 30px;
       }
     }
