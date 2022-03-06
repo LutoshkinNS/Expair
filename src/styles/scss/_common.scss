@@ -10,6 +10,7 @@ html, body {
   @include main-text;
   width: 100%;
   overflow-x: hidden;
+  background-color: $bg-light;
 }
 
 main {
