@@ -10,11 +10,20 @@
   background-position-y: 0, 100%;
   background-repeat: no-repeat, no-repeat;
 
+  &__inner {
+    overflow: hidden;
+  }
+
   &__list {
     max-width: 799px;
     list-style-type: none;
     padding-left: 52px;
     margin-bottom: 80px;
+  }
+
+  &__animation-item {
+    transform: translateX(130%);
+    transition: transform .5s ease-out;
   }
 
   &__item {

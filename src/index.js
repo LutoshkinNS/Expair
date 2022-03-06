@@ -9,7 +9,7 @@ import header from './modules/header/header';
 // cover
 import cover from './modules/cover/cover';
 // principles
-import './modules/principles/principles';
+import principles from './modules/principles/principles';
 // services
 import services from './modules/services/services';
 // situation
@@ -25,6 +25,7 @@ import './modules/footer/footer';
 
 header();
 cover();
+principles();
 services();
 feedback();
 closePopup();
