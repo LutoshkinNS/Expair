@@ -97,7 +97,13 @@
     }
 
     &__list-item {
-      padding-left: 20px;
+      padding-left: 10px;
+
+      &:before {
+        width: 5px;
+        height: 5px;
+        top: 7px;
+      }
     }
 
     &__title-icon {
