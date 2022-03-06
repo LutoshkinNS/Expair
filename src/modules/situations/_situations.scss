@@ -125,6 +125,10 @@
       font-size: 19px;
       line-height: 24px;
 
+      &:not(:last-child) {
+        margin-bottom: 44px;
+      }
+
       &:hover .situations__number {
         &:after {
           width: 41px;
@@ -145,7 +149,7 @@
       &:after {
         width: 35px;
         height: 35px;
-        top: -11px;
+        top: -10px;
         left: -11px;
       }
     }
