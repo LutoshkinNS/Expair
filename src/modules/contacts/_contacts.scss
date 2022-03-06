@@ -38,8 +38,20 @@
   }
 
   @media (max-width: $md) {
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    &__main {
+      margin-bottom: 45px;
+    }
+
     &__map {
       margin: 0px;
+    }
+
+    &__header {
+      margin-top: 61px;
+      margin-bottom: 50px;
     }
   }
 
