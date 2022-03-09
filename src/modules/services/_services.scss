@@ -63,6 +63,10 @@
     transition: max-height 0.5s, margin-top 0.5s;
   }
 
+  &__list-active {
+    margin-top: 43px;
+  }
+
   &__list-item {
     position: relative;
     padding-left: 32px;
@@ -104,6 +108,14 @@
         height: 5px;
         top: 7px;
       }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__list-active {
+      margin-top: 25px;
     }
 
     &__title-icon {

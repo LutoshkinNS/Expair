@@ -15,7 +15,7 @@ const services = () => {
         servicesAccordionItemContent.style.maxHeight = `${servicesAccordionItemContent.scrollHeight}px`;
         verticalElemPlusIcon.style.transform = 'rotate(90deg)';
         horizontalElemPlusIcon.style.transform = 'rotate(180deg)';
-        servicesAccordionItemContent.style.marginTop = '43px';
+        servicesAccordionItemContent.classList.add('services__list-active');
       };
 
       const closeAccordion = () => {
@@ -23,7 +23,7 @@ const services = () => {
         verticalElemPlusIcon.style.transform = 'rotate(0deg)';
         horizontalElemPlusIcon.style.transform = 'rotate(0deg)';
         setTimeout(() => {
-          servicesAccordionItemContent.style.marginTop = '0px';
+          servicesAccordionItemContent.classList.remove('services__list-active');
         }, 100);
       };
 
