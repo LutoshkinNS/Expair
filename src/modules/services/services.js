@@ -35,8 +35,8 @@ const services = () => {
           const thisServiceName = removeUnnecessary(item.querySelector('.services__title').innerHTML);
 
           if (removeUnnecessary(serviceNameData) === thisServiceName) {
-            const scrollToEl = item.getBoundingClientRect().top;
-            const heightHeader = document.querySelector('header').getBoundingClientRect().height;
+            const scrollToEl = item.getBoundingClientRect().top; /* Величина необходимая для скрола до элемента */
+            const heightHeader = document.querySelector('.header').getBoundingClientRect().height;
             window.scrollTo(0, scrollToEl - heightHeader);
             setTimeout(() => {
               openAccordion();
@@ -57,8 +57,9 @@ const services = () => {
       };
     });
   };
-
-  servicesAccordion();
+  window.onload = () => {
+    servicesAccordion();
+  };
 };
 
 export default services;
