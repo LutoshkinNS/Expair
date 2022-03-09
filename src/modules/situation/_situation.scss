@@ -9,6 +9,10 @@
   font-size: 20.5px;
   letter-spacing: -0.01em;
 
+  .page-padding {
+    padding: 0;
+  }
+
   &__header {
     margin-top: 105px;
     margin-bottom: 74px;
@@ -37,7 +41,7 @@
     background-color: $third-color;
     width: 50px;
     height: 50px;
-    z-index: -1;
+    z-index: 0;
   }
 
   &__text-block {
@@ -154,6 +158,10 @@
   }
 
   @media (max-width: $xl) {
+    .page-padding {
+      padding: 0 20px;
+    }
+
     &__header {
       display: flex;
     }
