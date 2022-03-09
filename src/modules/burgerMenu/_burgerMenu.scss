@@ -3,6 +3,7 @@
 @import "/src/styles/scss/_brakepoints.scss";
 
 .burger-menu {
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -146,6 +147,10 @@
     text-decoration: none;
   }
 
+  &__footer {
+    padding-bottom: 52px;
+  }
+
   &__socials {
     margin-bottom: 53px;
   }
@@ -172,7 +177,7 @@
     text-decoration: none;
     @include main-text;
     font-size: 18.6px;
-    line-height: 24px;
+    line-height: 18px;
     letter-spacing: normal;
 
     &:hover {
