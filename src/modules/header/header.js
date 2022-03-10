@@ -9,12 +9,21 @@ const header = () => {
   function openBurgerMenu() {
     const burgerBtn = document.getElementById('burgerBtn');
     const burgerMenu = document.getElementById('burgerMenu');
+    let isMobile;
+
+    window.addEventListener('resize', () => {
+      if (document.documentElement.clientWidth <= 768) {
+        isMobile = true;
+      }
+    });
 
     burgerBtn.onclick = () => {
       burgerMenu.classList.add('burger-menu_show');
       burgerMenu.style.opacity = '1';
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
+      if (isMobile) {
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+      }
     };
 
     document.onclick = (e) => {
