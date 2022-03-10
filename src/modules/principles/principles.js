@@ -14,7 +14,7 @@ const principles = () => {
         principlesItems.forEach((principlesItem, idx) => {
           setTimeout(() => {
             principlesItem.style.transform = 'translateX(0%)';
-          }, 250 * (idx + 1));
+          }, 200 * (idx));
         });
       }
     }
