@@ -48,8 +48,8 @@ const services = () => {
 
       getServiceName();
 
-      servicesAccordionItems[idx].onclick = () => {
-        if (servicesAccordionItemContent.style.maxHeight) {
+      servicesAccordionItems[idx].onclick = (e) => {
+        if (servicesAccordionItemContent.style.maxHeight && e.target.closest('.services-list__title-wrap')) {
           closeAccordion();
         } else {
           openAccordion();
