@@ -37,7 +37,7 @@ const services = () => {
           if (removeUnnecessary(serviceNameData) === thisServiceName) {
             const scrollToEl = item.getBoundingClientRect().top; /* Величина необходимая для скрола до элемента */
             const heightHeader = document.querySelector('.header').getBoundingClientRect().height;
-            window.scrollTo(0, scrollToEl - heightHeader);
+            window.scrollTo(0, scrollToEl - heightHeader - 30);
             setTimeout(() => {
               openAccordion();
               localStorage.removeItem('serviceName');

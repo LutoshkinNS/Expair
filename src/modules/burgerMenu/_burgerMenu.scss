@@ -176,10 +176,11 @@
   }
 
   &__politic {
+    display: block;
     text-decoration: none;
     @include main-text;
     font-size: 17px;
-    line-height: 24px;
+    line-height: 24.4px;
     letter-spacing: normal;
     margin-top: 53px;
 
@@ -213,7 +214,7 @@
 
   @media (max-width: $sm) {
     &__container {
-      padding: 14px 20px 52px;
+      padding: 14px 20px 60px;
     }
 
     &__header {
@@ -246,7 +247,7 @@
     &__politic {
       margin-top: 41px;
       font-size: 14px;
-      line-height: 18px;
+      line-height: 21px;
     }
   }
 }
